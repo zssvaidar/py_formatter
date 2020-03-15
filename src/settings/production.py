@@ -1,6 +1,6 @@
 import os
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))+'\\py_formatter'
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))+'\\src'
 
 SECRET_KEY = 'y&$dgfs3eiz#w@3-)sd3lp_2ao^'
 
@@ -12,7 +12,7 @@ ALLOWED_HOSTS = ['eb-django-app-dev.elasticbeanstalk.com']
 
 INSTALLED_APPS = [
     'rest_framework',
-    'py_formatter.apps.profiler',
+    'src.apps.profiler',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -21,9 +21,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 REST_FRAMEWORK = {
-    'DEFAULT_PARSER_CLASSES': [
-        'rest_framework_xml.parsers.XMLParser',
-    ],
+    # 'DEFAULT_PARSER_CLASSES': [
+    #     'rest_framework_xml.parsers.XMLParser',
+    # ],
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework_xml.renderers.XMLRenderer',
     ],
@@ -39,12 +39,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'py_formatter.urls'
+ROOT_URLCONF = 'src.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['py_formatter/templates'],
+        'DIRS': ['src/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -57,12 +57,12 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'py_formatter.wsgi.application'
+WSGI_APPLICATION = 'src.wsgi.application'
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'py_formatter/static/db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'static/db.sqlite3'),
     }
 }
 # DATABASES = {
@@ -75,6 +75,7 @@ DATABASES = {
 # 			'PORT': '3606'
 # 		}
 # 	}
+#
 
 
 LANGUAGE_CODE = 'en-us'

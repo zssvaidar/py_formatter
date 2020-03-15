@@ -4,8 +4,8 @@ from django.urls import path, include
 from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('/',include(('py_formatter.apps.profiler.urls', 'profiler'), namespace='profiler')),
-    path('api/profiler/',include(('py_formatter.apps.profiler.api.urls', 'profiler-gc'), namespace='profiler-gc')),
+    path('/',include(('src.apps.profiler.urls', 'profiler'), namespace='profiler')),
+    path('api/profiler/',include(('src.apps.profiler.api.urls', 'profiler-gc'), namespace='profiler-gc')),
 ]
 if(settings.DEBUG):
     urlpatterns+=static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

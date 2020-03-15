@@ -21,10 +21,10 @@ class ProfileListView(ListAPIView):
         return Response({'profiles': serializer_class.data})
 
     def post(self, request, format=None):
-        serializer_class = ProfileSerializer(data=request.data)
+        serializer_class = ProfileSerializer(data=request.data, context={'request': request})
         if serializer_class.is_valid():
             serializer_class.save()
-            return Response({'profiles': serializer_class.data})
+            return Response(serializer_class.data)
 
         return Response(serializer.errors)
 
