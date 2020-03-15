@@ -20,8 +20,9 @@ a {
 .card {
   display: flex;
   flex-direction: column;
+  justify-content:space-between;
   margin:32px 42px;
-  width: 18%;
+  box-shadow: 2px 2px 2px -2px black;
 
 }
 
@@ -52,5 +53,5 @@ a {
 }
 
 .shadow {
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175)
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.100)
 }
