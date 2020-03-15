@@ -1,7 +1,7 @@
 __pycache__/
 static_cdn/
 media_cdn/
-db.sqlite3
+
 .vscode
 local.py
 base.py
