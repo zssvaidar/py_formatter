@@ -6,9 +6,7 @@ SECRET_KEY = 'y&$dgfs3eiz#w@3-)sd3lp_2ao^'
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['django-env.eba-wmzdu4xz.us-west-2.elasticbeanstalk.com', '.elasticbeanstalk.com']
-
-
+ALLOWED_HOSTS = ['django-env.eba-wmzdu4xz.us-west-2.elasticbeanstalk.com/']
 
 INSTALLED_APPS = [
     'rest_framework',

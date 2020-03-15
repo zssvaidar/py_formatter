@@ -24,19 +24,25 @@ a {
   flex-direction: column;
   justify-content:space-between;
   margin:32px 42px;
-  padding:5px 15px 25px;
-
-  box-shadow: 3px 3px 2px -3px black;
+  border: 1px solid rgba(0,0,0,.125);
+  box-shadow: 1px 2px 2px -2px black;
+  width:240px;
 }
+.card-footer {
+  width: 100%;
+      border-top: 1px solid rgba(0,0,0,.125);
+}
+.card a:not(.prof-link) {
+  margin-left: 15px;
 
-.card a {
+}
+.card a{
   display: block;
   line-height: 100%;
-  width: 190px;
+  width: 100%;
   margin-top:8px;
-  padding: 2px 8px;
-  background-color: rgb(147, 108, 108);
 }
+
 .prof-tag span{
   font-size: 16px;
 }
@@ -45,11 +51,12 @@ a {
   font-weight: 600;
 }
 .prof-link {
-  border:solid black 1px;
   text-align: center;
+  padding: 5px
 }
 .prof-link:hover {
-  background-color:#fff;
+  transition: 200ms;
+  background-color:#eeeeee;
 }
 .inline {
   display: inline;
