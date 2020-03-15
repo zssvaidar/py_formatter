@@ -1,0 +1,34 @@
+{% extends 'base/base.html' %}
+{% block content %}
+  <div class="content">
+      {% for profile in profiles %}
+    <div class="card">
+
+    <a href="">
+      {{ profile.name }}</a>
+    <a href="">
+      {{ profile.surname }}</a>
+    <a href="">
+      {{ profile.phone_number }}</a>
+    <a href="">
+      {{ profile.mail }}</a>
+    <a href="">
+      {{ profile.address }}</a>
+
+      </div>
+      {% endfor %}
+    </div>
+
+  
+    <script type="text/javascript">
+      var array = new Array();
+      array[0] = 'string and integer '
+      array[1] = 56
+      // alert('that is it 2' +  array[0] + array[1]); 
+      function clickedd() {
+        // window.location.href = "http://localhost:8000/app";
+        alert('some button was clicked');
+      }
+
+    </script>
+{% endblock %}

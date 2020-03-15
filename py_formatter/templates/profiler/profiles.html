@@ -1,0 +1,83 @@
+{% extends 'base/base.html' %}
+{% block content %}
+
+{% for profile in profiles %}
+<a href="">
+  {{profile.url}}
+
+
+</a>
+{% endfor %}
+       <div class="content">
+    <div class="ribbon">
+      {% for profile in profiles %}
+      <div class="card">
+
+          <a class="prof-tag inline" href="">
+              <span>Firstname:</span>
+              <div class="inline">
+                {{ profile.name }}
+              </div>
+          </a>
+        
+            <a  class="prof-tag inline" href="">
+                <span>Surname:</span>
+                <div class="inline">
+                {{ profile.surname }}
+              </div>
+            </a>
+        
+            <a class="prof-tag inline" href="">
+              <span>Id:</span>
+              <div class="inline">
+                {{ profile.id }}
+                
+              </div>
+          </a>
+
+          <a class="prof-tag inline"href="">
+              <span> Phone number:</span>
+              <div class="inline">
+              {{ profile.phone_number }}
+            </div>
+          </a>
+
+        <a class="prof-tag "href="">
+            <span>E-mail:</span>
+            <div class="inline">
+            {{ profile.mail }}
+          </div>
+        </a>
+
+
+        <a class="prof-tag"href="">
+            <span>Address:</span>
+            <div class="inline">
+            {{ profile.address }}
+          </div>
+        </a>
+
+        <a class="prof-tag prof-link" href="{{profile.url}}">
+          <div class=" inline">
+            Navigate
+            
+          </div>
+        </a>
+        
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+    <script type="text/javascript">
+      var array = new Array();
+      array[0] = 'string and integer '
+      array[1] = 56
+      // alert('that is it 2' +  array[0] + array[1]); 
+      function clickedd() {
+        // window.location.href = "http://localhost:8000/app";
+        alert('some button was clicked');
+      }
+
+    </script> 
+{% endblock %}
